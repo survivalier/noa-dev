@@ -1,61 +1,175 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Page de test</title>
+<meta charset="UTF-8">
+<title>Page avec plein d'erreurs<title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
+<style>
 
-        h1 {
-            color: blue
-        }
+body {
+    background-color: lightgray
+    font-family: Arial;
+    margin: 0px
+}
 
-        .container {
-            width: 80%;
-            margin: auto;
-            border: 1px solid black
-        }
-    </style>
+.container {
+    width: 80
+    margin: auto;
+    border: 2px solid black
+    padding: 20px;
+}
+
+h1 {
+    color: red;
+    font-size 40px;
+}
+
+.button {
+    background-color: blue;
+    color white;
+    border: none;
+}
+
+#menu {
+    display: flex;
+    justify-content center;
+}
+
+</style>
+
 </head>
 
-<body>
+<bodyy>
 
-    <div class="container">
+<div class="container">
 
-        <h1>Bienvenue sur ma page</h1>
+<h1 id="titre">Ma page de test<h2>
 
-        <p>Ceci est une page contenant plusieurs erreurs volontaires.</p>
+<p>Cette page contient beaucoup d'erreurs.
 
-        <button onclick="afficherMessage()">Cliquez ici</button>
+<img src="image-inexistante.jpg"
 
-        <ul>
-            <li>Élément 1</li>
-            <li>Élément 2</li>
-            <li>Élément 3</li>
-        </ul>
+<a href="https://example.com">Lien cassé
 
-        image.jpg
+<form>
+    <input type="text" id="nom">
+    <input type="email" id="email">
+    <button type="submit">Envoyer
+</form>
 
-    </div>
+<ul>
+    <li>Accueil
+    <li>Produits
+    <li>Contact
+</ul>
 
-    <script>
-        function afficherMessage() {
-            alert("Bonjour !")
-            console.log("Message affiché")
-        }
+<table border="1">
+<tr>
+    <th>Nom
+    <th>Âge
+</tr>
+<tr>
+    <td>Paul
+    <td>25
+<tr>
+    <td>Marie
+    <td>30
+</table>
 
-        let nombre = 10;
+<button onclick="bonjour()">Cliquer</button>
 
-        if (nombre = 5) {
-            document.write("Le nombre vaut 5");
-        }
+<div id="resultat"></div>
 
-        document.getElementById("titre").innerHTML = "Nouveau titre";
-    </script>
+</div>
+
+<script>
+
+// Erreur de syntaxe
+function bonjour( {
+    alert("Bonjour")
+}
+
+// Variable non déclarée
+age = 25;
+
+// Constante modifiée
+const PI = 3.14;
+PI = 10;
+
+// Affectation dans une condition
+if(age = 18){
+    console.log("Majeur");
+}
+
+// Variable inexistante
+console.log(utilisateur);
+
+// Parenthèse oubliée
+console.log("Test"
+
+// Fonction inexistante
+calculAge();
+
+// Mauvais sélecteur
+document.getElementById("inexistant").innerHTML = "Texte";
+
+// Erreur dans le nom d'objet
+documment.write("Hello");
+
+// Appel avant déclaration
+maFonction();
+
+let maFonction = function() {
+    console.log("Fonction");
+}
+
+// JSON invalide
+let user = {
+nom: "Jean",
+age: 25,
+}
+
+// Division par zéro
+let resultat = 10 / 0;
+
+// Boucle infinie
+while(true){
+    console.log("infini");
+}
+
+// Mauvaise méthode
+document.getElementByClass("container");
+
+// Index hors limites
+let liste = ["A", "B"];
+console.log(liste[100].toUpperCase());
+
+// Référence nulle
+let bouton = document.querySelector("#bouton");
+bouton.style.color = "red";
+
+// Erreur de type
+let nombre = "10";
+nombre.toFixed(2);
+
+// Syntaxe invalide
+for(let i = 0; i < 10 i++){
+    console.log(i);
+}
+
+// Variable utilisée avant création
+console.log(prenom);
+let prenom = "Lucas";
+
+// Objet inexistant
+window.localStoragee.setItem("test","123");
+
+// ID dupliqué
+document.body.innerHTML += '<div id="titre">Double ID</div>';
+
+</script>
 
 </body>
+
 </html>
